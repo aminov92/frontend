@@ -1,28 +1,25 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- navbar -->
+    <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+      <div class="container">
+        <div class="w3-bar w3-top w3-red w3-large" style="z-index: 4">
+          <span class="w3-bar-item w3-right">Pizzahouse</span>
+          <span class="w3-left w3-mobile">
+            <router-link to="/" class="navbar-brand w3-bar-item w3-button"
+              >PriseCommandes</router-link
+            >
+            <router-link
+              class="nav-link w3-bar-item w3-button w3-teal"
+              to="/FilAttente"
+              >FilAttente</router-link
+            >
+          </span>
+        </div>
+      </div>
+    </div>
+    <router-view />
   </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
